@@ -1,0 +1,81 @@
+.affairContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #000 solid 1px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+/*.affairContainer:nth-of-type(odd) {*/
+/*    background-color: purple;*/
+/*}*/
+
+/*.affairContainer:nth-of-type(even) {*/
+/*    background-color: purple;*/
+/*}*/
+
+.affairName {
+    width: 220px;
+    text-align: start;
+}
+
+.affairPriority {
+    width: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.closeBtn {
+    background-color: #fff;
+    border-radius: 50%;
+    border: #000 solid 1px;
+    margin-left: 0;
+}
+
+.closeBtn:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.closeBtn:active {
+    color: red;
+    background-color: #333;
+    border-color: #333;
+    transform: scale(0.9);
+}
+
+.btnContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 80px;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #000;
+    border: #000 solid 2px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.btn:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.btn:active {
+    color: red;
+    background-color: #333;
+    border-color: #333;
+    transform: scale(0.9);
+}

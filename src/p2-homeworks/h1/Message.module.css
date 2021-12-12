@@ -1,0 +1,27 @@
+.message {
+display:flex;
+align-items: flex-end;
+margin: 10px;
+background-color: greenyellow;
+width: 700px;
+height: 150px;
+}
+
+   .ava{
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px; 
+    border-radius: 50%; 
+}
+
+.text {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px 5px 5px 0;
+  background-color: grey;
+}
+
+.text .time {
+  margin-left: 200px;
+}

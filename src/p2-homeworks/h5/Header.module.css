@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    margin-left: 30px;
+    padding-left: 30px;
+    width: 600px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: cadetblue;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navLink {
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.active {
+    color: rgb(42, 241, 24);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
