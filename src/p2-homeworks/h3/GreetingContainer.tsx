@@ -21,13 +21,18 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({ users, addUse
 
 
     const setNameCallback = (value: string) => { // need to fix any
+        setError('')
         setName(value) // need to fix
 
     }
     const addUser = (name: string) => {
-        addUserCallback(name)
-        setName('')
-        alert(`${"Hello "}${name}${"!"}`) // need to fix ???????????????????
+        if(name.trim() != ""){
+            addUserCallback(name)
+            setName('')
+            alert(`${"Hello "}${name}${"!"}`) // need to fix ???????????????????
+        }else {
+            setError('Icorrect value') 
+        }
     }
 
     const totalUsers = users.length// need to fix
