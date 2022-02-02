@@ -29,7 +29,7 @@ function HW8() {
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
     const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'down'}))
-    const sorAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'check', payload: 18}))
+    const sortAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'check', payload: 18}))
 
     return (
         <div>
@@ -41,7 +41,7 @@ function HW8() {
 
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
             <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-            <div><SuperButton onClick={sorAge}>check 18</SuperButton></div>
+            <div><SuperButton onClick={sortAge}>check 18</SuperButton></div>
             
 
             <hr/>
