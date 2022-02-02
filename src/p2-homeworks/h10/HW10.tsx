@@ -1,5 +1,6 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import { Preloader } from './preloader';
 
 function HW10() {
     // useSelector, useDispatch
@@ -13,13 +14,14 @@ function HW10() {
 
     return (
         <div>
+            {/* <Preloader/> */}
             <hr/>
             homeworks 10
 
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div>крутилка...</div>
+                    <Preloader/>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
