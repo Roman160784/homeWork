@@ -18,8 +18,6 @@ function Clock() {
         setTimerId(id)
     }
   
-
-
     const onMouseEnter = () => {
         setShow(true)
     }
