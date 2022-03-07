@@ -6,7 +6,7 @@ import { AppStoreType } from './bll/store';
 import { Preloader } from './preloader';
 
 function HW10() {
-    
+
     let isLoading = useSelector<AppStoreType, boolean>(state => state.loading.isLoading)
     let dispatch = useDispatch()
 
