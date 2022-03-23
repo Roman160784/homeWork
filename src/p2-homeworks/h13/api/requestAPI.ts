@@ -1,2 +1,5 @@
+import axios from "axios";
 
-export let a = 0
+export const instance = axios.create({
+    baseURL : 'https://neko-cafe-back.herokuapp.com/auth/test'
+})
