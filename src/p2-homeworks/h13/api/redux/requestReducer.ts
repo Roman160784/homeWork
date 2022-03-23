@@ -1,3 +1,6 @@
+import { Dispatch } from "redux"
+import { requestAPI } from "../requestAPI"
+
 
 type initialStateType = {
     success: boolean
@@ -28,5 +31,8 @@ export type setCheckBoxValueType = ReturnType<typeof setCheckBoxValueAC>
 export const setCheckBoxValueAC = (success: boolean) => ({type : 'REQUEST/SET-CHECKBOX-VALUE', success} as const)
 
 export const setCheckBoxValueTC = (success: boolean) => {
-
+        return (dispatch: Dispatch) => {
+            requestAPI.postSuccess(success)
+            
+        }
 }
