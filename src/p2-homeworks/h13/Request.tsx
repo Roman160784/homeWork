@@ -23,6 +23,7 @@ export const  Request = ({getCheckBoxValue, ...props}: RequestPropsType) => {
         <div>
             <button onClick={onClickHandler}>Click</button>
             <input type="checkbox" onChange={onChangeHandler}/>
+            
         </div>
     )
 }

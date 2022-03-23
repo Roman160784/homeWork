@@ -7,6 +7,6 @@ export const instance = axios.create({
 
 export const requestAPI = {
     postSuccess(success: boolean) {
-        instance.post('auth/test', {success})
+      return  instance.post('auth/test', {success})
     }
 }

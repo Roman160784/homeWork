@@ -3,20 +3,22 @@ import { requestAPI } from "../requestAPI"
 
 
 type initialStateType = {
-    success: boolean
+    success:  string | null
 }
 
 
 export const initialState :initialStateType = {
-    success: true
+    success: null
 }
     
 
 
-export const requestReducers = (state: initialStateType = initialState, action: MainActionType) => {
+export const requestReducers = (state: initialStateType = initialState, action: MainActionType) : initialStateType => {
     switch(action.type){
         case 'REQUEST/SET-CHECKBOX-VALUE' : {
-            return {...state, success: action.success}
+             let a = {...state, success: action.success}
+             debugger
+             return a
         }
     }
 
@@ -28,11 +30,13 @@ export type MainActionType = setCheckBoxValueType
 export type setCheckBoxValueType = ReturnType<typeof setCheckBoxValueAC>
 
 
-export const setCheckBoxValueAC = (success: boolean) => ({type : 'REQUEST/SET-CHECKBOX-VALUE', success} as const)
+export const setCheckBoxValueAC = (success: string) => ({type : 'REQUEST/SET-CHECKBOX-VALUE', success} as const)
 
 export const setCheckBoxValueTC = (success: boolean) => {
-        return (dispatch: Dispatch) => {
-            requestAPI.postSuccess(success)
-            
-        }
+    return (dispatch: Dispatch) =>{
+        requestAPI.postSuccess(success)
+        .then((res) => {
+            dispatch(setCheckBoxValueAC(res.data.errorText))
+        })
+    }
 }
