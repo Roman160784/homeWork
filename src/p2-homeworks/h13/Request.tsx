@@ -5,7 +5,7 @@ type RequestPropsType = {
 }
 
 
-export const  Request = ({getCheckBoxValue}: RequestPropsType) => {
+export const  Request = ({getCheckBoxValue, ...props}: RequestPropsType) => {
 
     const [checkboxValue, setCheckboxValue] = useState<boolean>(false)
 

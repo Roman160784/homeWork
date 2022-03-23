@@ -8,7 +8,7 @@ export const HW13 = () => {
 
 
     const getCheckBoxValue = (success: boolean) => {
-        dispatch
+       console.log(success);
     }
 
     return (
