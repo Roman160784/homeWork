@@ -1,3 +1,4 @@
+import { AxiosError } from "axios"
 import { Dispatch } from "redux"
 import { requestAPI } from "../requestAPI"
 
@@ -16,9 +17,7 @@ export const initialState :initialStateType = {
 export const requestReducers = (state: initialStateType = initialState, action: MainActionType) : initialStateType => {
     switch(action.type){
         case 'REQUEST/SET-CHECKBOX-VALUE' : {
-             let a = {...state, success: action.success}
-             debugger
-             return a
+            return  {...state, success: action.success} 
         }
     }
 
@@ -37,6 +36,9 @@ export const setCheckBoxValueTC = (success: boolean) => {
         requestAPI.postSuccess(success)
         .then((res) => {
             dispatch(setCheckBoxValueAC(res.data.errorText))
+        })
+        .catch((error: AxiosError) => {
+            dispatch(setCheckBoxValueAC(error.response ? error.response.data.errorText : error.message))
         })
     }
 }
